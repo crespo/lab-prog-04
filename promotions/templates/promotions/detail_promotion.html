@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <main>
-        <div class="container">
-            <h1>Detalhe Produto</h1>
-            <h2>{{ promotion.title }}</h2>
-        </div>
-    </main>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block titlechange %}
+{{ promotion.title }}
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>Detalhe Produto</h1>
+        <h2>{{ promotion.title }}</h2>
+	<p>{{ promotion.description }}</p>
+     </div>
+{% endblock %}
